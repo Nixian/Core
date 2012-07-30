@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CE9223B-56B2-410D-A88F-778A0A46B66B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Carbon.Core</RootNamespace>
+    <AssemblyName>Carbon.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\DefaultCacheProvider.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Data\IContainer.cs" />
+    <Compile Include="Controls\Batching\Batch.cs" />
+    <Compile Include="Controls\Batching\Batcher.cs" />
+    <Compile Include="Extensions\Net\SocketExtensions.cs" />
+    <Compile Include="Geography\AddressExtensions.cs" />
+    <Compile Include="Geography\IAddress.cs" />
+    <Compile Include="Identity\ISession.cs" />
+    <Compile Include="Media\FileFormat.cs" />
+    <Compile Include="Media\MediaType.cs" />
+    <Compile Include="Media\Mime\Mime.cs" />
+    <Compile Include="Media\Mime\MimeHelper.cs" />
+    <Compile Include="Scheduling\ExponentialBackoffRetryPolicy.cs" />
+    <Compile Include="Scheduling\IRetryPolicy.cs" />
+    <Compile Include="Scheduling\JobState.cs" />
+    <Compile Include="Scheduling\PolicyScheduler.cs" />
+    <Compile Include="Security\IPassword.cs" />
+    <Compile Include="Text\Casing.cs" />
+    <Compile Include="Units\TimeUnit.cs" />
+    <Compile Include="Security\RandomNumber.cs" />
+    <Compile Include="Text\QuotedPrintable.cs" />
+    <Compile Include="Identity\AgentType.cs" />
+    <Compile Include="Extensions\CharExtensions.cs" />
+    <Compile Include="Extensions\Collections\CollectionExtensions.cs" />
+    <Compile Include="Extensions\Collections\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\Collections\NameValueCollectionExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\Drawing\ColorExtensions.cs" />
+    <Compile Include="Extensions\FloatExtensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\IO\DirectoryInfoExtensions.cs" />
+    <Compile Include="Extensions\IO\FileInfoExtensions.cs" />
+    <Compile Include="Extensions\IO\StreamExtensions.cs" />
+    <Compile Include="Extensions\Net\IPAddressExtensions.cs" />
+    <Compile Include="Extensions\Net\WebRequestExtensions.cs" />
+    <Compile Include="Extensions\Net\WebResponseExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Extensions\Xml\XElementExtensions.cs" />
+    <Compile Include="Text\Alphabet.cs" />
+    <Compile Include="Helpers\DateHelper.cs" />
+    <Compile Include="Text\HexString.cs" />
+    <Compile Include="Helpers\IOHelper.cs" />
+    <Compile Include="Text\TextHelper.cs" />
+    <Compile Include="Helpers\TZMap.cs" />
+    <Compile Include="Helpers\UnixTime.cs" />
+    <Compile Include="Logging\ConsoleLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\NullLogger.cs" />
+    <Compile Include="Units\Distance.cs" />
+    <Compile Include="Units\UnitDetails.cs" />
+    <Compile Include="Units\WeightExtensions.cs" />
+    <Compile Include="Units\IMeasurement.cs" />
+    <Compile Include="Units\Range.cs" />
+    <Compile Include="Units\DateRange.cs" />
+    <Compile Include="Units\Duration.cs" />
+    <Compile Include="Identity\IAgent.cs" />
+    <Compile Include="Data\IEntity.cs" />
+    <Compile Include="Units\Interval.cs" />
+    <Compile Include="Units\IRange.cs" />
+    <Compile Include="Identity\IUser.cs" />
+    <Compile Include="Identity\IUserDetails.cs" />
+    <Compile Include="Units\MeasurementUnit.cs" />
+    <Compile Include="Units\Weight.cs" />
+    <Compile Include="Parsing\SourceReader.cs" />
+    <Compile Include="Parsing\StringBuffer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\MemberInfoExtensions.cs" />
+    <Compile Include="Reflection\ObjectExtensions.cs" />
+    <Compile Include="Reflection\PropertyInfoExtensions.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Security\Authorization\IAuthorizable.cs" />
+    <Compile Include="Security\Authorization\IAuthorizationService.cs" />
+    <Compile Include="Security\ILockable.cs" />
+    <Compile Include="Identity\IMembership.cs" />
+    <Compile Include="Security\Operation.cs" />
+    <Compile Include="Security\Principal.cs" />
+    <Compile Include="Security\Sanitation\Sanitizer.cs" />
+    <Compile Include="Security\Sanitation\SantitizeAttribute.cs" />
+    <Compile Include="Security\Signature.cs" />
+    <Compile Include="Validation\Attributes\AlphaNumericAttribute.cs" />
+    <Compile Include="Validation\Attributes\AnsiAttribute.cs" />
+    <Compile Include="Validation\Attributes\NoNumbersAttribute.cs" />
+    <Compile Include="Validation\Attributes\UrlAttribute.cs" />
+    <Compile Include="Validation\Attributes\NumericAttribute.cs" />
+    <Compile Include="Validation\Attributes\DomainNameAttribute.cs" />
+    <Compile Include="Validation\Attributes\RangeAttribute.cs" />
+    <Compile Include="Validation\Attributes\DivisibleByAttribute.cs" />
+    <Compile Include="Validation\Attributes\TimeZoneAttribute.cs" />
+    <Compile Include="Validation\Attributes\EmailAddressAttribute.cs" />
+    <Compile Include="Validation\Attributes\FutureDateAttribute.cs" />
+    <Compile Include="Validation\Attributes\MustEqualAttribute.cs" />
+    <Compile Include="Validation\Attributes\MustNotEqualAttribute.cs" />
+    <Compile Include="Validation\Attributes\NonObviousPassword.cs" />
+    <Compile Include="Validation\Attributes\RequiredAttribute.cs" />
+    <Compile Include="Validation\Attributes\StringLength.cs" />
+    <Compile Include="Validation\Helpers\ValidationHelper.cs" />
+    <Compile Include="Validation\Models\ValidationError.cs" />
+    <Compile Include="Validation\Models\ValidationErrorCollection.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
