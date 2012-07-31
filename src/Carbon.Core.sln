@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carbon.Core", "Carbon.Core\Carbon.Core.csproj", "{6CE9223B-56B2-410D-A88F-778A0A46B66B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carbon.Core.Tests", "Carbon.Core.Tests\Carbon.Core.Tests.csproj", "{E8D69785-1A47-414A-B87C-95A42D78E8A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{6CE9223B-56B2-410D-A88F-778A0A46B66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE9223B-56B2-410D-A88F-778A0A46B66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE9223B-56B2-410D-A88F-778A0A46B66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D69785-1A47-414A-B87C-95A42D78E8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D69785-1A47-414A-B87C-95A42D78E8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D69785-1A47-414A-B87C-95A42D78E8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D69785-1A47-414A-B87C-95A42D78E8A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
