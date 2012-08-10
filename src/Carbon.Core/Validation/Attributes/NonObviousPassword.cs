@@ -4,25 +4,24 @@
 	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 
-	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
 	public class NonObviousPassword : ValidationAttribute
 	{
 		public static readonly HashSet<string> ObviousPasswords = new HashSet<string> { 
-			/*NUMBERS*/		"123456", "12345", "123456789", "1234567", "12345678", "654321", "111111", "777777",
-			/*PASSWORDS*/	"password", "password1", "passw0rd", "passwd", "password123", "drowssap", "secret",
-			/*KEYS*/		"abc123", "abcdef", "qwerty", "zzzzzz", "zxcvbnm", "zxcvbn",
-			/*PHRASES*/		"iloveyou", "letmein", "tigger", "babygirl", 
-			/*COMMON*/		"link182", "monster", "princess", "lovely", "internet", "trustno1",
-			/*ANIMALS*/		"monkey", "chicken", "dolphin", "falcon", "dragon", "beaver",
-			/*LOCATIONS*/	"brazil", "canada", "chicago", "newyork", "sydney", 
-			/*FOODS*/		"apple", "banana", "chocolate",
-			/*CARS*/		"firebird", "ferrari", "porsche", "toyota", "corvette", "camaro", "bronco",
-			/*SPORTS*/		"baseball", "soccer", "football", "nascar", "swimming",
-			/*MOVIES*/		"ironman", "matrix", "starwars",
-			/*BANDS*/		"blink182"
-		};
+			/*Numbers*/		"123456", "12345", "123456789", "1234567", "12345678", "654321", "111111", "777777",
+			/*Passwords*/	"password", "password1", "passw0rd", "passwd", "password123", "drowssap", "secret",
+			/*Keys*/		"abc123", "abcdef", "qwerty", "zzzzzz", "zxcvbnm", "zxcvbn",
+			/*Phrases*/		"iloveyou", "letmein", "tigger", "babygirl", "fuckyou",
+			/*Common*/		"link182", "monster", "princess", "lovely", "internet", "trustno1", "master",
+			/*Animals*/		"beaver", "chicken", "dolphin", "dragon", "falcon", "monkey",
+			/*Locations*/	"brazil", "canada", "chicago", "newyork", "sydney", 
+			/*Foods*/		"apple", "banana", "chocolate", "pepper",
+			/*Cars*/		"firebird", "ferrari", "porsche", "toyota", "corvette", "camaro", "bronco",
+			/*Sports*/		"baseball", "soccer", "football", "nascar", "swimming",
+			/*Movies*/		"ironman", "matrix", "starwars",
+			/*Bands*/		"blink182",
 
-		public static readonly HashSet<string> PopularNames = new HashSet<string> {
+			// Popular names
 			"albert", "alexis", "amanda", "andrea", "andrew", "angela",  "anthony", "ashley", "arthur",
 			"bonnie", "brandon", "brandy",
 			"daniel", "danielle", "debbie", "dennis",
@@ -44,9 +43,9 @@
 			if (string.IsNullOrEmpty(text)) 
 				return true;
 
-			text = text.ToLower();
+			text = text.ToLower().Trim();
 
-			return ObviousPasswords.Contains(text) || PopularNames.Contains(text);
+			return !ObviousPasswords.Contains(text);
 		}
 	}
 }

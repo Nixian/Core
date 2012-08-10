@@ -4,9 +4,12 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2012 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.0.11")]
+[assembly: AssemblyVersion("4.0.12")]
 
 /*
+ 4.0.12 (2012-08-05)
+ - Removed TextHelper.StripXmlTags
+ 
  4.0.11 (2012-07-30)
  -----------------------------------------------------
  - Moved ::Media into Carbon.Media
