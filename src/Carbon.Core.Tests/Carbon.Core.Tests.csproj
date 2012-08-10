@@ -38,6 +38,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressTests.cs" />
     <Compile Include="Batching\BatcherTest.cs" />
     <Compile Include="Encoding\HexStringTests.cs" />
     <Compile Include="Encoding\QuotedPrintable.cs" />
@@ -45,6 +46,7 @@
     <Compile Include="Measurements\DurationTests.cs" />
     <Compile Include="Measurements\IntervalTests.cs" />
     <Compile Include="Measurements\WeightTest.cs" />
+    <Compile Include="Media\MediaTypeTests.cs" />
     <Compile Include="Media\MimeHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionTests.cs" />

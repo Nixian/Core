@@ -13,6 +13,16 @@
 	public class SantizerTests
 	{
 		[Test]
+		public void Test()
+		{
+			var html = @"<a target=""_blank"" href=""http://casinospam.com"">SPAM</a>";
+
+			var result = Sanitizer.AddNoFollows(html);
+
+			Assert.AreEqual(@"<a target=""_blank"" href=""http://casinospam.com"" rel=""nofollow"">SPAM</a>", result);
+		}
+
+		[Test]
 		public void Entity_with_no_sanitizers_reports_no_sanitizers()
 		{
 			var properties = Sanitizer.GetPropertiesNeedingSanitation(typeof(Word));
