@@ -4,9 +4,12 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2012 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.0.12")]
+[assembly: AssemblyVersion("4.0.13")]
 
 /*
+ 4.0.12 (2012-08-12)
+ - Changed Mime to struct w/ Type and Format properties
+
  4.0.12 (2012-08-05)
  - Removed TextHelper.StripXmlTags
  

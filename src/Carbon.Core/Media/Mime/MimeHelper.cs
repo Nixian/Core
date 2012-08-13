@@ -8,7 +8,7 @@ namespace Carbon.Media
 
 	public static class MimeHelper
 	{
-		public static readonly Dictionary<string, string> FormatToMimeMap = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase) {
+		public static readonly Dictionary<string, Mime> FormatToMimeMap = new Dictionary<string, Mime>() {
 			// Applications: Documents
 			{ "doc",	Mime.Doc },
 			{ "pdf",	Mime.Pdf },
@@ -53,6 +53,7 @@ namespace Carbon.Media
 
 			// Text
 			{ "css",	Mime.Css },
+			{ "csv",	Mime.Csv },
 			{ "htm",	Mime.Html },
 			{ "html",	Mime.Html },
 			{ "txt",	Mime.Txt },
@@ -72,37 +73,5 @@ namespace Carbon.Media
 			{ "webm",	Mime.WebM },
 			{ "wmv",	Mime.Wmv }
 		};
-
-		public static MediaType GetMediaTypeFromFileExtension(string fileExtension)
-		{
-			#region Preconditions
-
-			if (fileExtension == null)
-				throw new ArgumentNullException("fileExtension");
-
-			#endregion
-
-			var format = fileExtension.TrimStart('.');
-
-			return GetMediaTypeFromFormat(format);
-		}
-
-		public static MediaType GetMediaTypeFromFormat(string format)
-		{
-			#region Preconditions
-
-			if (format == null)
-				throw new ArgumentNullException("format");
-
-			#endregion
-
-			string mime;
-			
-			if(FormatToMimeMap.TryGetValue(format, out mime)) {
-				return mime.Split('/')[0].ToEnum<MediaType>(ignoreCase: true);
-			}
-
-			return MediaType.Unknown;
-		}
 	}
 }

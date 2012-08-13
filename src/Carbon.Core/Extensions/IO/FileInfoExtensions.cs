@@ -8,7 +8,7 @@
 	{
 		public static string GetMimeType(this FileInfo file)
 		{
-			return Mime.FromFileExtension(file.Extension);
+			return Mime.FromExtension(file.Extension);
 		}
 
 		public static string ReadAllText(this FileInfo file) 

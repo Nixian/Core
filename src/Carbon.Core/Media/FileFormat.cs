@@ -5,19 +5,6 @@
 
 	public static class FileFormat
 	{
-		/*
-		public static string FromMime(string mime)
-		{
-			string format;
-
-			if (!MimeHelper.MimeToFormatMap.TryGetValue(mime, out format)) {
-				throw new ArgumentException("Mime named '{0}' not found".FormatWith(mime));
-			}
-
-			return format;
-		}
-		*/
-
 		public static string Normalize(string format)
 		{
 			#region Preconditions

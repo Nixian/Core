@@ -22,33 +22,26 @@
 		[Test]
 		public void ApplicationTypeTests()
 		{
-			// Applications
-			var formats = new[] { "js", "swf", "zip" };
+			var formats = new[] { "js", "json", "swf", "xap", "zip" };
 
-			formats.Each(format =>
-				Assert.AreEqual(MediaType.Application, MimeHelper.GetMediaTypeFromFormat(format))
-			);
+			formats.Each(format => Assert.AreEqual(MediaType.Application, Mime.FromFormat(format).Type));
 		}
 
 		[Test]
 		public void TextTypeTests()
 		{
 			// Text
-			var formats = new[] { "css", "txt", "xml" };
+			var formats = new[] { "css", "csv", "txt", "xml" };
 
-			formats.Each(format =>
-				Assert.AreEqual(MediaType.Text, MimeHelper.GetMediaTypeFromFormat(format))
-			);
+			formats.Each(format => Assert.AreEqual(MediaType.Text, Mime.FromFormat(format).Type));
 		}
 
 		[Test]
 		public void AudioTypeTests()
 		{
-			var formats = new[] { "aac", "mp3", "ra", "wma" };
+			var formats = new[] { "aac", "mp3", "ra", "wav", "wma" };
 
-			formats.Each(format =>
-				Assert.AreEqual(MediaType.Audio, MimeHelper.GetMediaTypeFromFormat(format))
-			);
+			formats.Each(format => Assert.AreEqual(MediaType.Audio, Mime.FromFormat(format).Type));
 		}
 
 		[Test]
@@ -56,9 +49,7 @@
 		{
 			var formats = new[] { "bmp", "gif", "ico", "jpg", "jpeg", "jxr", "png", "tif", "tiff" };
 
-			formats.Each(format =>
-				Assert.AreEqual(MediaType.Image, MimeHelper.GetMediaTypeFromFormat(format))
-			);
+			formats.Each(format => Assert.AreEqual(MediaType.Image, Mime.FromFormat(format).Type));
 		}
 
 		[Test]
@@ -66,9 +57,7 @@
 		{
 			var formats = new[] { "avi", "f4v", "flv", "m4v", "mp4", "mpg", "mpeg", "qt", "webm", "wmv" };
 
-			formats.Each(format =>
-				Assert.AreEqual(MediaType.Video, MimeHelper.GetMediaTypeFromFormat(format))
-			);
+			formats.Each(format => Assert.AreEqual(MediaType.Video, Mime.FromFormat(format).Type));
 		}
 	}
 }
