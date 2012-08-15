@@ -9,8 +9,7 @@
 		[Test]
 		public void ToLines()
 		{
-			var address = new Address
-			{
+			var address = new Address {
 				Line1 = "582 Market Street",
 				Line2 = "Suite 1115",
 				City = "San Francisco",
