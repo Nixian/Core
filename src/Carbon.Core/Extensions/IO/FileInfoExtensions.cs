@@ -2,14 +2,14 @@
 {
 	using System.IO;
 
-	using Carbon.Media;
-
 	public static class FileInfoExtensions
 	{
+		/*
 		public static string GetMimeType(this FileInfo file)
 		{
 			return Mime.FromExtension(file.Extension);
 		}
+		*/
 
 		public static string ReadAllText(this FileInfo file) 
 		{

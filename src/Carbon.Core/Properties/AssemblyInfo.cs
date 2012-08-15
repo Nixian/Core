@@ -4,13 +4,24 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2012 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.0.13")]
+[assembly: AssemblyVersion("4.5.0")]
 
 /*
- 4.0.12 (2012-08-12)
+ 4.5.0 (2012-08-12)
+ -----------------------------------------------------
+ - Removed WebRequest extensions
+ - Update to .NET 4.5
+
+ 4.0.14 (2012-08-12)
+ -----------------------------------------------------
+ - Moved Mime to Carbon.Media
+ 
+ 4.0.13 (2012-08-12)
+ -----------------------------------------------------
  - Changed Mime to struct w/ Type and Format properties
 
  4.0.12 (2012-08-05)
+ -----------------------------------------------------
  - Removed TextHelper.StripXmlTags
  
  4.0.11 (2012-07-30)
