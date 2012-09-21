@@ -71,7 +71,6 @@
     <Compile Include="Extensions\IO\FileInfoExtensions.cs" />
     <Compile Include="Extensions\IO\StreamExtensions.cs" />
     <Compile Include="Extensions\Net\IPAddressExtensions.cs" />
-    <Compile Include="Extensions\Net\WebResponseExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
     <Compile Include="Extensions\Xml\XElementExtensions.cs" />
