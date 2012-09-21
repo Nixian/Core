@@ -47,6 +47,7 @@
     <Compile Include="Batching\BatcherTest.cs" />
     <Compile Include="Encoding\HexStringTests.cs" />
     <Compile Include="Encoding\QuotedPrintable.cs" />
+    <Compile Include="IO\IOHelperTests.cs" />
     <Compile Include="Measurements\DateRangeTests.cs" />
     <Compile Include="Measurements\DurationTests.cs" />
     <Compile Include="Measurements\IntervalTests.cs" />
