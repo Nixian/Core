@@ -46,7 +46,8 @@
 
 		public static void Times(this Int32 self, Action<int> action)
 		{
-			for (int i = 0; i < self; i++) {
+			for (int i = 0; i < self; i++) 
+			{
 				action(i);
 			}
 		}
