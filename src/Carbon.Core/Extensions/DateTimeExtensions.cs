@@ -70,9 +70,15 @@
 			}
 		}
 
-		public static string TimeAgoInWords(this DateTime dt)
+		public static string TimeAgoInWords(this DateTime date)
 		{
-			var ts = DateTime.UtcNow - dt.ToUniversalTime();
+			switch (date.Kind)
+			{
+				case DateTimeKind.Unspecified:	date = DateTime.SpecifyKind(date, DateTimeKind.Utc);	break; // Assume to be Utc
+				case DateTimeKind.Local:		date = date.ToUniversalTime();							break; // Convert to Utc
+			}
+
+			var ts = DateTime.UtcNow - date;
 
 			if (ts.TotalSeconds < 1) {
 				return "just now";
@@ -92,7 +98,7 @@
 				case TimeUnit.Day:			return new DateTime(date.Year, date.Month, date.Day, 0, 0, 0, date.Kind);
 				case TimeUnit.Month:		return new DateTime(date.Year, date.Month, 1, 0, 0, 0, date.Kind);
 				case TimeUnit.Year:			return new DateTime(date.Year, 1, 1, 0, 0, 0, date.Kind);
-				default:					throw new ArgumentException("Invalid time precision");
+				default:					throw new ArgumentException("Unsupported precision: {0}.".FormatWith(precision));
 			}
 		}
 	}
