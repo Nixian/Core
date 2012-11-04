@@ -61,7 +61,8 @@
 
 		public static string ToW3UtcZ(this DateTime dt)
 		{
-			if (dt.Millisecond > 0) {
+			if (dt.Millisecond > 0) 
+			{
 				// 2009-01-04T17:18:54.7062347Z
 				return dt.ToString("o"); // (ISO 8601)
 			}
@@ -89,7 +90,8 @@
 
 		public static DateTime ChangePrecision(this DateTime date, TimeUnit precision)
 		{
-			switch (precision) {
+			switch (precision) 
+			{
 				case TimeUnit.Tick:			return date;
 				case TimeUnit.Milisecond:	return new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, date.Millisecond, date.Kind);
 				case TimeUnit.Second:		return new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, date.Kind);

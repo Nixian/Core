@@ -1,8 +1,6 @@
 ﻿namespace Carbon.Parsing
 {
 	using System;
-	using System.Globalization;
-	using System.Text;
 	using System.IO;
 
 	using Carbon.Helpers;
@@ -97,12 +95,11 @@
 
 		#region IDisposable
 
-		public void Dispose() {
-			if (isDisposed) {
-				return;
-			}
+		public void Dispose()
+		{
+			if (isDisposed) return;
 
-			textReader.Close();
+			textReader.Dispose();
 
 			isDisposed = true;
 		}

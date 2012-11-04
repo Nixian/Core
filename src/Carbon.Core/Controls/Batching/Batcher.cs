@@ -42,11 +42,13 @@
 			}
 		}
 
-		public int ItemsPerBatch {
+		public int ItemsPerBatch 
+		{
 			get { return itemsPerBatch; }
 		}
 
-		public int ItemCount {
+		public int ItemCount 
+		{
 			get { return itemCount; }
 		}
 

@@ -1,6 +1,5 @@
 ﻿namespace Carbon.Reflection
 {
-	using System;
 	using System.Reflection;
 
 	public static class PropertyInfoExtensions

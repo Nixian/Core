@@ -5,6 +5,8 @@ namespace Carbon.Helpers
 
 	public static class IOHelper
 	{
+		private static readonly string[] ByteMultiples = { "B", "KB", "MB", "GB", "TB", "PB", "EB" };
+
 		public const long BytesInKilobyte = 1024;						// 1,024
 		public const long BytesInMegabyte = BytesInKilobyte * 1024;		// 1,048,576
 		public const long BytesInGigabyte = BytesInMegabyte * 1024;		// 1,073,741,824
@@ -30,9 +32,8 @@ namespace Carbon.Helpers
 			return true;
 		}
 
-        public static string FormatBytes(long byteCount) {
-			var scales = new[] { "B", "KB", "MB", "GB", "TB", "PB", "EB" };
-
+        public static string FormatBytes(long byteCount) 
+		{
 			int i = 0;
 
 			double value = byteCount;
@@ -44,7 +45,7 @@ namespace Carbon.Helpers
 				i++;
 			}
 
-			return String.Concat(ThreeNonZeroDigits(value), " ", scales[i]);
+			return String.Concat(ThreeNonZeroDigits(value), " ", ByteMultiples[i]);
         }
 
 		// TODO: i > 6

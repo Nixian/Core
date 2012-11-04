@@ -29,11 +29,13 @@ namespace Carbon
 			this.end = start + duration;
 		}
 
-		public DateTime Start {
+		public DateTime Start 
+		{
 			get { return start; }
 		}
 
-		public DateTime End {
+		public DateTime End 
+		{
 			get { return end; }
 		}
 

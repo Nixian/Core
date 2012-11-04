@@ -21,7 +21,7 @@
 				Calories = 100
 			};
 
-			Assert.AreEqual("Orange", orange.GetPropertyValue<string>("name"));
+			Assert.AreEqual("Orange", orange.GetPropertyValue<string>("Name"));
 			Assert.AreEqual(Color.Orange, orange.GetPropertyValue<Color>("Color"));
 			Assert.AreEqual(100, orange.GetPropertyValue("Calories"));
 			Assert.AreEqual(false, orange.GetPropertyValue<bool>("IsEaten"));

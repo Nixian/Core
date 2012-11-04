@@ -2,12 +2,12 @@
 {
 	public class UnitDetails
 	{
-		private readonly string unitText;
+		private readonly string text;
 		private readonly UnitOfMeasurementCategory type;
 
 		public UnitDetails(string text)
 		{
-			this.unitText = text;
+			this.text = text;
 
 			if (text.EndsWith("kg") || text.EndsWith("lb"))
 			{
@@ -22,7 +22,7 @@
 
 		public bool IsPeriod
 		{
-			get { return unitText.StartsWith("P"); }
+			get { return text.StartsWith("P"); }
 		}
 
 		public bool IsMass
@@ -37,7 +37,7 @@
 
 		public override string ToString()
 		{
-			return unitText;
+			return text;
 		}
 	}
 }

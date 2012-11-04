@@ -3,8 +3,6 @@
 	using System;
 	using System.Reflection;
 
-	using Carbon.Helpers;
-
 	public static class ObjectExtensions
 	{
 		public static T GetPropertyValue<T>(this object instance, string propertyName)
@@ -26,19 +24,16 @@
 
 			Type type = instance.GetType();
 
-			var propertyInfo = type.GetProperty(
-				propertyName,
-				BindingFlags.Instance | BindingFlags.Public | BindingFlags.Static | BindingFlags.IgnoreCase
-			);
+			var property = type.GetProperty(propertyName, BindingFlags.Instance | BindingFlags.Public);
 
-			if (propertyInfo == null)
+			if (property == null)
 			{
-				throw new Exception("Type '{0}' does not have public property named '{1}'.".FormatWith(
+				throw new Exception(string.Format("The type '{0}' does not have a property named '{1}'.",
 					/*0*/ type.FullName, /*1*/ propertyName
 				));
 			}
 
-			return instance.GetPropertyValue(propertyInfo);
+			return instance.GetPropertyValue(property);
 		}
 
 		public static T GetPropertyValue<T>(this object instance, PropertyInfo propertyInfo)
@@ -46,9 +41,6 @@
 			return (T)GetPropertyValue(instance, propertyInfo);
 		}
 
-		/// <summary>
-		/// Get the property value of the object. Throws an exception if the property value can not be read
-		/// </summary>
 		public static object GetPropertyValue(this object instance, PropertyInfo propertyInfo)
 		{
 			#region Preconditions
