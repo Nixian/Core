@@ -5,6 +5,7 @@ namespace Carbon.Validation
 	using System.Collections.Generic;
 	using System.Linq;
 
+	[Serializable]
     public class ValidationErrorCollection : Collection<ValidationError>
     {
 		public void Add(string errorMessage) 

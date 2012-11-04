@@ -1,7 +1,9 @@
 ﻿namespace Carbon.Validation
 {
 	using System;
+	using System.Runtime.Serialization;
 
+	[Serializable]
 	public class ValidationError
 	{
 		private readonly string key;
@@ -23,7 +25,8 @@
 			get { return key; }
 		}
 
-		public string Message {
+		public string Message 
+		{
 			get { return message; }
 		}
 
