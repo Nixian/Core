@@ -12,5 +12,7 @@
 		IAgent Target { get; }
 
 		string[] Roles { get; }
+
+		bool HasRole(string role);
 	}
 }
