@@ -9,9 +9,6 @@ namespace Carbon.Helpers
 
 	public static class TextHelper
 	{
-		// unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
-		public const string UnreservedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
-
 		public static string ToCamelCase(this string pascalCase)
 		{
 			if (pascalCase.IsNullOrEmpty()) return pascalCase;
@@ -212,11 +209,13 @@ namespace Carbon.Helpers
 			// Percent encode all unreserved characters
 			// The standard HttpUtility.UrlEncode uses x2 (lowercase)
 
+			var urlSafeChars = CharacterSet.UrlSafe;
+
 			var sb = new StringBuilder();
 
 			foreach (char symbol in Encoding.UTF8.GetBytes(text))
 			{
-				if (UnreservedUrlCharacters.IndexOf(symbol) != -1)
+				if (urlSafeChars.Contains(symbol))
 				{
 					sb.Append(symbol);
 				}
