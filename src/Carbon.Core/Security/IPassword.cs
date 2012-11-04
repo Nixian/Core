@@ -1,11 +1,11 @@
 ﻿namespace Carbon.Security
 {
-	using System;
-
 	public interface IPassword
 	{
-		Int16 Version { get; }
+		int Version { get; }
 
-		string Hash { get; }
+		byte[] Hash { get; }
+
+		byte[] Salt { get; }
 	}
 }
