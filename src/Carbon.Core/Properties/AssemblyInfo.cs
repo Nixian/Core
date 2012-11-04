@@ -4,9 +4,36 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2012 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.5.0")]
+[assembly: AssemblyVersion("4.5.3")]
 
 /*
+ 4.5.3 (2012-11-01)
+ -----------------------------------------------------
+ - Added CharacterSet
+ 
+ * Security*					
+ - Moved IAuthorizationService to Carbon.Security	*Breaking
+ - Moved Signature to Carbon.Security				*Breaking
+ 
+ * IUser *
+ - Inhert from IAgent
+ - Added GetMembership(IAgent agency)
+ - Removed HasMembership(IAgent agency)				*Breaking
+ 
+ * IPassword *
+ - Changed Version to Int32							*Breaking
+ - Added byte[] Salt
+ - Changed Hash type from string to byte[]			*Breaking
+
+ 4.5.2 (2012-10-01)
+ -----------------------------------------------------
+ * ValidationErrorCollection *
+ - Made serializable
+ 
+ 4.5.1 (2012-09-20)
+ -----------------------------------------------------
+ - Removed retry policies
+ 
  4.5.0 (2012-08-12)
  -----------------------------------------------------
  - Removed WebRequest extensions

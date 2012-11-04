@@ -56,6 +56,7 @@
     <Compile Include="Scheduling\JobState.cs" />
     <Compile Include="Security\IPassword.cs" />
     <Compile Include="Text\Casing.cs" />
+    <Compile Include="Text\CharacterSet.cs" />
     <Compile Include="Units\TimeUnit.cs" />
     <Compile Include="Security\RandomNumber.cs" />
     <Compile Include="Text\QuotedPrintable.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Units\Interval.cs" />
     <Compile Include="Units\IRange.cs" />
     <Compile Include="Identity\IUser.cs" />
-    <Compile Include="Identity\IUserDetails.cs" />
     <Compile Include="Units\MeasurementUnit.cs" />
     <Compile Include="Units\Weight.cs" />
     <Compile Include="Parsing\SourceReader.cs" />
@@ -106,16 +106,13 @@
     <Compile Include="Reflection\MemberInfoExtensions.cs" />
     <Compile Include="Reflection\ObjectExtensions.cs" />
     <Compile Include="Reflection\PropertyInfoExtensions.cs" />
-    <Compile Include="Reflection\ReflectionHelper.cs" />
-    <Compile Include="Security\Authorization\IAuthorizable.cs" />
-    <Compile Include="Security\Authorization\IAuthorizationService.cs" />
+    <Compile Include="Security\IAuthorizable.cs" />
     <Compile Include="Security\ILockable.cs" />
     <Compile Include="Identity\IMembership.cs" />
     <Compile Include="Security\Operation.cs" />
     <Compile Include="Security\Principal.cs" />
     <Compile Include="Security\Sanitation\Sanitizer.cs" />
     <Compile Include="Security\Sanitation\SantitizeAttribute.cs" />
-    <Compile Include="Security\Signature.cs" />
     <Compile Include="Validation\Attributes\AlphaNumericAttribute.cs" />
     <Compile Include="Validation\Attributes\AnsiAttribute.cs" />
     <Compile Include="Validation\Attributes\NoNumbersAttribute.cs" />

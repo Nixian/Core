@@ -3,3 +3,5 @@ src/Carbon.Core.Tests/bin/
 src/Carbon.Core.Tests/obj/
 src/Carbon.Core/bin/
 src/Carbon.Core/obj/
+/src/Carbon.Core.v11.suo
+/release/
