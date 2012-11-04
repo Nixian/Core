@@ -13,8 +13,7 @@
 	{
 		public static void Sanitize(object entity)
 		{
-			if (entity == null)
-				return;
+			if (entity == null) return;
 
 			// Get the properties that need to be santized
 			var propertiesNeedingSantation = GetPropertiesNeedingSanitation(entity.GetType());

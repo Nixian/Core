@@ -5,11 +5,11 @@
 
 	public static class RandomNumber
 	{
+		private static RandomNumberGenerator rng = new RNGCryptoServiceProvider();
+
 		public static int Generate(int min, int max)
 		{
-			var rng = new RNGCryptoServiceProvider();
-
-			byte[] randomData = new byte[4];
+			var randomData = new byte[4];
 
 			rng.GetBytes(randomData);
 

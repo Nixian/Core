@@ -3,14 +3,8 @@
 	using System;
 	using System.Text;
 
-	/// <summary>
-	/// Hexidecimal string
-	/// </summary>
 	public static class HexString
 	{
-		/// <summary>
-		/// Converts a byte array to a hexidecimal string
-		/// </summary>
 		public static string FromBytes(byte[] bytes)
 		{
 			#region Preconditions
@@ -22,7 +16,8 @@
 
 			var sb = new StringBuilder(bytes.Length * 2);
 
-			foreach (byte b in bytes) {
+			foreach (byte b in bytes) 
+			{
 				sb.Append(b.ToString("x2"));
 			}
 
@@ -43,7 +38,8 @@
 
 			byte[] bytes = new byte[hexString.Length / 2];
 
-			for (int i = 0; i < hexString.Length; i += 2) {
+			for (int i = 0; i < hexString.Length; i += 2) 
+			{
 				bytes[i / 2] = Convert.ToByte(hexString.Substring(i, 2), 16);
 			}
 
