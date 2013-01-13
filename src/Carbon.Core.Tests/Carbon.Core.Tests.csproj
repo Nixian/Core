@@ -46,6 +46,7 @@
     <Compile Include="AddressTests.cs" />
     <Compile Include="Batching\BatcherTest.cs" />
     <Compile Include="CharacterSetTests.cs" />
+    <Compile Include="EnumHelperTests.cs" />
     <Compile Include="DateTimeExtensionTests.cs" />
     <Compile Include="Encoding\HexStringTests.cs" />
     <Compile Include="Encoding\QuotedPrintable.cs" />
