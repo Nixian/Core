@@ -15,17 +15,13 @@
 		{
 			if (entity == null) return;
 
-			// Get the properties that need to be santized
-			var propertiesNeedingSantation = GetPropertiesNeedingSanitation(entity.GetType());
+			var sanitizedProperties = GetSanitizedProperties(entity.GetType());
 
-			foreach (var property in propertiesNeedingSantation)
+			foreach (var property in sanitizedProperties)
 			{
-				// Get the current property value
-				string value = entity.GetPropertyValue<string>(property);
+				var value = entity.GetPropertyValue<string>(property);
 
-				if (value.IsNullOrEmpty()) {
-					continue;
-				}
+				if (value.IsNullOrEmpty()) continue;
 
 				var sanitizeAttribute = property.GetFirstCustomAttribute<SanitizeAttribute>();
 
@@ -38,7 +34,8 @@
 
 				// Add nofollow refs rel="nofollow"
 
-				if (sanitizeAttribute.AddNoFollowsToLinks) {
+				if (sanitizeAttribute.AddNoFollowsToLinks) 
+				{
 					value = AddNoFollows(value);
 				}
 
@@ -47,7 +44,7 @@
 			}
 		}
 
-		public static IEnumerable<PropertyInfo> GetPropertiesNeedingSanitation(Type type)
+		public static IEnumerable<PropertyInfo> GetSanitizedProperties(Type type)
 		{
 			#region Preconditions
 

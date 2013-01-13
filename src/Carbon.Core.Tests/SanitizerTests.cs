@@ -25,7 +25,7 @@
 		[Test]
 		public void Entity_with_no_sanitizers_reports_no_sanitizers()
 		{
-			var properties = Sanitizer.GetPropertiesNeedingSanitation(typeof(Word));
+			var properties = Sanitizer.GetSanitizedProperties(typeof(Word));
 
 			Assert.AreEqual(0, properties.Count());
 		}
@@ -39,7 +39,7 @@
 				Body = "<b>oranges</b>"
 			};
 
-			var properties = Sanitizer.GetPropertiesNeedingSanitation(post.GetType());
+			var properties = Sanitizer.GetSanitizedProperties(post.GetType());
 
 			// Make sure there are three properties needing santization (title and body)
 			Assert.AreEqual(2, properties.Count());
@@ -61,7 +61,7 @@
 				Body = "<b>oranges</b>"
 			};
 
-			var properties = Sanitizer.GetPropertiesNeedingSanitation(post.GetType());
+			var properties = Sanitizer.GetSanitizedProperties(post.GetType());
 
 			// Make sure there are three properties needing santization (title and body and category)
 			Assert.AreEqual(2, properties.Count());
@@ -76,7 +76,7 @@
 		}
 	}
 
-	internal class Post : IAuthorizable
+	internal class Post
 	{
 		public int Id { get; set; }
 
