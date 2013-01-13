@@ -17,7 +17,4 @@
 }
 
 // TODO:
-// - Change Country to CountryCode
-
-// Changes:
-// - Street1 & 2 to Line1 & 2
+// - Change Country to CountryCode or CountryName

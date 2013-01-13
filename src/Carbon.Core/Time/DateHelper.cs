@@ -1,8 +1,8 @@
 namespace Carbon.Helpers
 {
 	using System;
-	using System.Globalization;
-    using System.Threading;
+
+	using Carbon;
 
 	// Epoch: An instant in time that is arbitrarily selected as a point of reference.
 
@@ -26,10 +26,13 @@ namespace Carbon.Helpers
 		/// <summary>
 		/// Converts a date to date+time+offset for the provided time zone
 		/// </summary>
-		public static DateTimeOffset ToDateTimeOffset(this DateTime dateTime, TimeZoneInfo timeZone)
+		public static DateTimeOffset ToDateTimeOffset(this DateTime dateTime, ITimeZone timeZone)
 		{
 			// HACK
-			dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified);
+			if (dateTime.Kind != DateTimeKind.Unspecified)
+			{
+				dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified);
+			}
 
 			var utcOffset = timeZone.GetUtcOffset(dateTime);
 

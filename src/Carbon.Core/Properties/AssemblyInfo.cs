@@ -2,16 +2,46 @@
 
 [assembly: AssemblyTitle("Carbon.Core")]
 [assembly: AssemblyProduct("Carbon")]
-[assembly: AssemblyCopyright("© 2004-2012 Jason Nelson")]
+[assembly: AssemblyCopyright("© 2004-2013 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.5.3")]
+[assembly: AssemblyVersion("4.5.9")]
 
 /*
+ 4.5.9 (2013-01-13)
+ ------------------------------------------------------------
+ - Incrimented © to 2013
+ 
+ - Added IClock
+ - Added ITimeZone
+
+ 4.5.6 (2012-12-14)
+ ------------------------------------------------------------
+ - Moved IAuthorizable to Carbon.Security
+ - Moved ILockable to Carbon.Security
+ - Moved ISession to Carbon.Security
+ - Moved IPassword to Carbon.Security
+ - Moved Principle to Carbon.Security
+
+ 
+ 4.5.5 (2012-12-13)
+ ------------------------------------------------------------
+ - Added EnumHelper.GetItems
+
+ 4.5.4 (2012-12-10)
+ ------------------------------------------------------------
+ * Batcher *	
+ - Implement IEnumerator<Batch>
+ 
+ 4.5.4 (2012-11-14)
+ ------------------------------------------------------------
+ - Moved Princable to Carbon.Security				*Breaking
+ - Moved ISession to Carbon.Security				*Breaking
+ 
  4.5.3 (2012-11-01)
- -----------------------------------------------------
+ ------------------------------------------------------------
  - Added CharacterSet
  
- * Security*					
+ * Security *					
  - Moved IAuthorizationService to Carbon.Security	*Breaking
  - Moved Signature to Carbon.Security				*Breaking
  

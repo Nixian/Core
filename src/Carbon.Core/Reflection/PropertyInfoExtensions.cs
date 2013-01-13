@@ -1,19 +1,19 @@
 ﻿namespace Carbon.Reflection
 {
+	using System;
 	using System.Reflection;
 
 	public static class PropertyInfoExtensions
 	{
-		/// <summary>
-		/// Sets the property value of the object. Returns whether the binding was succesful
-		/// </summary>
-		public static bool SetValue(this PropertyInfo propertyInfo, object instance, object value)
+		public static void SetValue(this PropertyInfo propertyInfo, object instance, object value)
 		{
-			if (!propertyInfo.CanWrite) return false;
+			#region Preconditions
+
+			if (!propertyInfo.CanWrite) throw new Exception("Property is not writable.");
+
+			#endregion
 
 			propertyInfo.SetValue(instance, value, null);
-
-			return true;
 		}
 	}
 }

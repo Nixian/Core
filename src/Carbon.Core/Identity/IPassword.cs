@@ -4,7 +4,10 @@
 	{
 		int Version { get; }
 
-		byte[] Hash { get; }
+		/// <summary>
+		/// Derived from the original password and salt
+		/// </summary>
+		byte[] Key { get; }
 
 		byte[] Salt { get; }
 	}

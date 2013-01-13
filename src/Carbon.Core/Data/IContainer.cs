@@ -2,6 +2,6 @@
 {
 	public interface IContainer
 	{
-		int Id { get; }
+		int Id { get; } // Future: Consider making long
 	}
 }
