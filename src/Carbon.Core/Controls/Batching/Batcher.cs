@@ -1,28 +1,30 @@
 ﻿namespace Carbon.Controls
 {
 	using System;
+	using System.Collections;
 	using System.Collections.Generic;
-	using System.Linq;
 
-	public class Batcher
+	public sealed class Batcher : IEnumerable<Batch>
 	{
-		private readonly int itemsPerBatch;
+		private readonly int batchSize;
 		private readonly int itemCount;
 
-		public Batcher(int itemsPerBatch, int itemCount)
+		public Batcher(int batchSize, int itemCount)
 		{
 			#region Preconditions
 
-			if (itemsPerBatch <= 0)
+			if (batchSize <= 0)
+			{
 				throw new ArgumentOutOfRangeException(
-					/*paramName*/ "itemsPerBatch",
-					/*actualValue*/ itemsPerBatch,
-					/*message*/ "itemsPerBatch must be greater than 0"
+					paramName:		"batchSize",
+					actualValue:	batchSize,
+					message:		"Must be greater than 0"
 				);
+			}
 
 			#endregion
 
-			this.itemsPerBatch = itemsPerBatch;
+			this.batchSize = batchSize;
 			this.itemCount = itemCount;
 		}
 
@@ -31,10 +33,10 @@
 			get
 			{
 				// Count the whole bacthes
-				int batchCount = itemCount / itemsPerBatch;
+				int batchCount = itemCount / batchSize;
 
 				// Add 1 if there's a remaining partial batch
-				if (itemCount % itemsPerBatch > 0) {
+				if (itemCount % batchSize > 0) {
 					batchCount++;
 				}
 
@@ -42,9 +44,9 @@
 			}
 		}
 
-		public int ItemsPerBatch 
+		public int BatchSize 
 		{
-			get { return itemsPerBatch; }
+			get { return batchSize; }
 		}
 
 		public int ItemCount 
@@ -59,12 +61,26 @@
 				for (int i = 0; i < BatchCount; i++)
 				{
 					yield return new Batch(
-						number: i + 1,
-						offset: i * itemsPerBatch,
-						limit: (itemCount < itemsPerBatch * i) ? itemCount : itemsPerBatch
+						index: i,
+						skip: i * batchSize,
+						take: (itemCount < batchSize * i) ? itemCount : batchSize
 					);
 				}
 			}
 		}
+
+		#region IEnumerator<Batch>
+
+		IEnumerator<Batch> IEnumerable<Batch>.GetEnumerator()
+		{
+			return Batches.GetEnumerator();
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return Batches.GetEnumerator();
+		}
+
+		#endregion
 	}
 }

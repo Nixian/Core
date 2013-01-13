@@ -1,36 +1,31 @@
 ﻿namespace Carbon.Controls
 {
-	public class Batch
+	public sealed class Batch
 	{
-		private readonly int number;
-		private readonly int offset;
-		private readonly int limit;
+		private readonly int index;
+		private readonly int skip;	// offset
+		private readonly int take; // limit
 
-		public Batch(int number, int offset, int limit) 
+		public Batch(int index, int skip, int take) 
 		{
-			this.number = number;
-			this.offset = offset;
-			this.limit = limit;
+			this.index = index;
+			this.skip = skip;
+			this.take = take;
 		}
 
-		public int Number
+		public int Index
 		{
-			get { return number; }
+			get { return index; }
 		}
 
-		public int Offset 
+		public int Skip 
 		{
-			get { return offset; }
+			get { return skip; }
 		}
 
-		public int Limit 
+		public int Take 
 		{
-			get { return limit; }
-		}
-
-		public int FirstItem 
-		{
-			get { return offset + 1; }
+			get { return take; }
 		}
 	}
 }

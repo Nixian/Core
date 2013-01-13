@@ -9,7 +9,8 @@
 	public class BatcherTest
 	{
 		[Test]
-		public void BatchCounts() {
+		public void BatchCounts() 
+		{
 			Assert.AreEqual(10, new Batcher(10, 100).BatchCount);
 			Assert.AreEqual(20, new Batcher(5, 97).BatchCount);
 		}
@@ -21,15 +22,15 @@
 
 			var firstBatch = batcher.Batches.First();
 
-			Assert.AreEqual(1, firstBatch.Number);
-			Assert.AreEqual(0, firstBatch.Offset);
-			Assert.AreEqual(10, firstBatch.Limit);
+			Assert.AreEqual(0, firstBatch.Index);
+			Assert.AreEqual(0, firstBatch.Skip);
+			Assert.AreEqual(10, firstBatch.Take);
 
 			var lastBatch = batcher.Batches.Last();
 
-			Assert.AreEqual(10, lastBatch.Number);
-			Assert.AreEqual(90, lastBatch.Offset);
-			Assert.AreEqual(10, lastBatch.Limit);
+			Assert.AreEqual(9, lastBatch.Index);
+			Assert.AreEqual(90, lastBatch.Skip);
+			Assert.AreEqual(10, lastBatch.Take);
 		}
 
 		/*
