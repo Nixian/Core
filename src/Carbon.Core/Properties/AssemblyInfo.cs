@@ -4,9 +4,19 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2013 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.5.9")]
+[assembly: AssemblyVersion("4.6.0")]
 
 /*
+ 4.6.0 (2012-02-10)
+ ------------------------------------------------------------ 
+ * Geometry *
+ - Added IGeometry
+ - Added GeometryGroup
+ - Added Line
+ - Added Polygon
+ - Added Point
+ - Added Rectangle
+ 
  4.5.9 (2013-01-13)
  ------------------------------------------------------------
  - Incrimented © to 2013
@@ -19,9 +29,7 @@
  - Moved IAuthorizable to Carbon.Security
  - Moved ILockable to Carbon.Security
  - Moved ISession to Carbon.Security
- - Moved IPassword to Carbon.Security
  - Moved Principle to Carbon.Security
-
  
  4.5.5 (2012-12-13)
  ------------------------------------------------------------

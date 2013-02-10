@@ -53,6 +53,12 @@
     <Compile Include="Extensions\Net\SocketExtensions.cs" />
     <Compile Include="Geography\AddressExtensions.cs" />
     <Compile Include="Geography\IAddress.cs" />
+    <Compile Include="Geometry\Rectangle.cs" />
+    <Compile Include="Geometry\GeometryGroup.cs" />
+    <Compile Include="Geometry\IGeometry.cs" />
+    <Compile Include="Geometry\Line.cs" />
+    <Compile Include="Geometry\Point.cs" />
+    <Compile Include="Geometry\Polygon.cs" />
     <Compile Include="Identity\IPassword.cs" />
     <Compile Include="Scheduling\JobState.cs" />
     <Compile Include="Text\Casing.cs" />

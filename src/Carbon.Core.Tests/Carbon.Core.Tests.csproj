@@ -50,6 +50,7 @@
     <Compile Include="DateTimeExtensionTests.cs" />
     <Compile Include="Encoding\HexStringTests.cs" />
     <Compile Include="Encoding\QuotedPrintable.cs" />
+    <Compile Include="Geometry\PointEqualityTests.cs" />
     <Compile Include="IO\IOHelperTests.cs" />
     <Compile Include="Measurements\DateRangeTests.cs" />
     <Compile Include="Measurements\DurationTests.cs" />
