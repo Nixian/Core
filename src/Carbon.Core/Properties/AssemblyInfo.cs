@@ -4,9 +4,18 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2013 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.6.0")]
+[assembly: AssemblyVersion("4.6.2")]
 
 /*
+ 4.6.2 (2012-02-15)
+ ------------------------------------------------------------ 
+ Add WebColor
+
+ 4.6.1 (2012-02-10)
+ ------------------------------------------------------------ 
+ * Scale *
+ - Linear scale
+ 
  4.6.0 (2012-02-10)
  ------------------------------------------------------------ 
  * Geometry *

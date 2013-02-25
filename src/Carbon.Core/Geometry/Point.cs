@@ -2,7 +2,7 @@
 {
 	using System;
 
-	public struct Point : IGeometry
+	public struct Point : IPoint, IGeometry
 	{
 		public readonly static Point Zero = new Point(0, 0);
 

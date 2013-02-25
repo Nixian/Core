@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="Caching\DefaultCacheProvider.cs" />
     <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Color\IColor.cs" />
+    <Compile Include="Color\WebColor.cs" />
     <Compile Include="Data\IContainer.cs" />
     <Compile Include="Controls\Batching\Batch.cs" />
     <Compile Include="Controls\Batching\Batcher.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Extensions\Net\SocketExtensions.cs" />
     <Compile Include="Geography\AddressExtensions.cs" />
     <Compile Include="Geography\IAddress.cs" />
+    <Compile Include="Geometry\Interfaces\IPoint.cs" />
     <Compile Include="Geometry\Rectangle.cs" />
     <Compile Include="Geometry\GeometryGroup.cs" />
     <Compile Include="Geometry\IGeometry.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Geometry\Point.cs" />
     <Compile Include="Geometry\Polygon.cs" />
     <Compile Include="Identity\IPassword.cs" />
+    <Compile Include="Math\Scale.cs" />
     <Compile Include="Scheduling\JobState.cs" />
     <Compile Include="Text\Casing.cs" />
     <Compile Include="Text\CharacterSet.cs" />

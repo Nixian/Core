@@ -61,11 +61,31 @@
 			position++;
 		}
 
+		/// <summary>
+		/// Advances to the next character without appending it to the buffer
+		/// </summary>
+		public void Skip()
+		{
+			int charCode = textReader.Read(); // -1 if there are no more chars to read (e.g. stream has ended)
+
+			this.current = (charCode > 0) ? (char)charCode : EofChar;
+
+			position++;
+		}
+
+		public void ReadWhitespace()
+		{
+			while (current.IsWhiteSpace())
+			{
+				Next();
+			}
+		}
+
 		public void SkipWhitespace() 
 		{
 			while (current.IsWhiteSpace()) 
 			{
-				Next();
+				Skip();
 			}
 		}
 
