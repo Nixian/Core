@@ -4,9 +4,16 @@
 [assembly: AssemblyProduct("Carbon")]
 [assembly: AssemblyCopyright("© 2004-2013 Jason Nelson")]
 
-[assembly: AssemblyVersion("4.6.2")]
+[assembly: AssemblyVersion("4.6.3")]
 
 /*
+ 4.6.3 (2013-03-01)
+ ------------------------------------------------------------ 
+ - Remove IPassword							Breaking
+ 
+ * IUser *
+ - Remove Password							Breaking
+ 
  4.6.2 (2012-02-15)
  ------------------------------------------------------------ 
  Add WebColor
