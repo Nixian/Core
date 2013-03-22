@@ -7,6 +7,8 @@
 [assembly: AssemblyVersion("4.6.3")]
 
 /*
+ - Remove NonObviousPassword
+
  4.6.3 (2013-03-01)
  ------------------------------------------------------------ 
  - Remove IPassword							Breaking

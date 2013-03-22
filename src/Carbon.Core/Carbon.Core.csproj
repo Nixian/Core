@@ -135,7 +135,6 @@
     <Compile Include="Validation\Attributes\FutureDateAttribute.cs" />
     <Compile Include="Validation\Attributes\MustEqualAttribute.cs" />
     <Compile Include="Validation\Attributes\MustNotEqualAttribute.cs" />
-    <Compile Include="Validation\Attributes\NonObviousPassword.cs" />
     <Compile Include="Validation\Attributes\RequiredAttribute.cs" />
     <Compile Include="Validation\Attributes\StringLength.cs" />
     <Compile Include="Validation\Helpers\ValidationHelper.cs" />
