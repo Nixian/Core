@@ -3,5 +3,11 @@
 	using System;
 
 	[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-	public class RequiredAttribute : System.ComponentModel.DataAnnotations.RequiredAttribute { }
+	public class RequiredAttribute : System.ComponentModel.DataAnnotations.RequiredAttribute 
+	{
+		public RequiredAttribute()
+		{
+			this.ErrorMessage = "Required";
+		}
+	}
 }
